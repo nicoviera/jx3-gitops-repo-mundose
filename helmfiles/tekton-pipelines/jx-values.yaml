@@ -32,16 +32,20 @@ jxRequirements:
     provider: minikube
   environments:
   - key: dev
+    owner: nicoviera
+    repository: jx3-gitops-repo-mundose
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: 64.227.15.139.nip.io
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: nicoviera
   repository: bucketrepo
   secretStorage: local
   vault: {}
